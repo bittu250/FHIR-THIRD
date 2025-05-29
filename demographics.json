@@ -1,0 +1,83 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "PatientProfile",
+  "url": "http://example.org/fhir/StructureDefinition/PatientProfile",
+  "version": "1.0.0",
+  "name": "PatientProfile",
+  "status": "draft",
+  "date": "2025-05-28",
+  "publisher": "Example Publisher",
+  "description": "StructureDefinition for capturing patient profile data with constraints and questions.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Patient",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Patient",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Patient.name",
+        "path": "Patient.name",
+        "min": 1,
+        "max": "1",
+        "short": "What is your full name?",
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.gender",
+        "path": "Patient.gender",
+        "min": 1,
+        "max": "1",
+        "short": "What is your gender?",
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.birthDate",
+        "path": "Patient.birthDate",
+        "min": 1,
+        "max": "1",
+        "short": "What is your date of birth?",
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.address",
+        "path": "Patient.address",
+        "min": 0,
+        "max": "1",
+        "short": "What is your current address?"
+      },
+      {
+        "id": "Patient.telecom",
+        "path": "Patient.telecom",
+        "min": 1,
+        "max": "*",
+        "short": "What is your contact number?",
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.communication.language",
+        "path": "Patient.communication.language",
+        "min": 0,
+        "max": "1",
+        "short": "What is your preferred language?"
+      },
+      {
+        "id": "Patient.extension:ethnicity",
+        "path": "Patient.extension",
+        "sliceName": "ethnicity",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://example.org/fhir/StructureDefinition/nepali-ethnicity"
+            ]
+          }
+        ],
+        "short": "What is your ethnicity?"
+      }
+    ]
+  }
+}

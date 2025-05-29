@@ -1,0 +1,485 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "MotherChildNutritionSurvey",
+  "url": "http://example.org/fhir/StructureDefinition/MotherChildNutritionSurvey",
+  "name": "MotherChildNutritionSurvey",
+  "title": "Mother and Child Nutrition Survey StructureDefinition",
+  "status": "draft",
+  "date": "2025-05-28",
+  "publisher": "Example Publisher",
+  "description": "StructureDefinition for Mother and Child Nutrition Survey questions with their types and cardinalities.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Questionnaire",  
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Questionnaire",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Questionnaire.item.vitaminAChild",
+        "path": "Questionnaire.item",
+        "short": "Has the child received Vitamin A in the last 6 months?",
+        "min": 0,
+        "max": "1",
+        "type": [
+          { "code": "boolean" }
+        ],
+        "extension": [
+          {
+            "url": "http://example.org/fhir/StructureDefinition/himsCode",
+            "valueString": "2.3"
+          }
+        ]
+      },
+      {
+        "id": "Questionnaire.item.ironFolicAcidMother",
+        "path": "Questionnaire.item",
+        "short": "Has the mother received iron-folic acid during pregnancy?",
+        "min": 0,
+        "max": "1",
+        "type": [
+          { "code": "boolean" }
+        ],
+        "extension": [
+          {
+            "url": "http://example.org/fhir/StructureDefinition/himsCode",
+            "valueString": "3.1"
+          }
+        ]
+      },
+      {
+        "id": "Questionnaire.item.childGrowthMonitoring",
+        "path": "Questionnaire.item",
+        "short": "Is the child currently enrolled in a growth monitoring program?",
+        "min": 0,
+        "max": "1",
+        "type": [
+          { "code": "boolean" }
+        ],
+        "extension": [
+          {
+            "url": "http://example.org/fhir/StructureDefinition/himsCode",
+            "valueString": "2.3"
+          }
+        ]
+      },
+      {
+        "id": "Questionnaire.item.childExclusivelyBreastfed",
+        "path": "Questionnaire.item",
+        "short": "Was the child exclusively breastfed for the first 6 months?",
+        "min": 0,
+        "max": "1",
+        "type": [
+          { "code": "boolean" }
+        ],
+        "extension": [
+          {
+            "url": "http://example.org/fhir/StructureDefinition/himsCode",
+            "valueString": "2.3"
+          }
+        ]
+      },
+      {
+        "id": "Questionnaire.item.childReferredMalnutrition",
+        "path": "Questionnaire.item",
+        "short": "Has the child been referred for malnutrition treatment?",
+        "min": 0,
+        "max": "1",
+        "type": [
+          { "code": "boolean" }
+        ],
+        "extension": [
+          {
+            "url": "http://example.org/fhir/StructureDefinition/himsCode",
+            "valueString": "2.3"
+          }
+        ]
+      },
+      {
+        "id": "Questionnaire.item.childWeight",
+        "path": "Questionnaire.item",
+        "short": "What is the weight of the child (in kg)?",
+        "min": 0,
+        "max": "1",
+        "type": [
+          { "code": "integer" }
+        ],
+        "extension": [
+          {
+            "url": "http://example.org/fhir/StructureDefinition/himsCode",
+            "valueString": "2.3"
+          }
+        ]
+      },
+      {
+        "id": "Questionnaire.item.childHeight",
+        "path": "Questionnaire.item",
+        "short": "What is the height of the child (in cm)?",
+        "min": 0,
+        "max": "1",
+        "type": [
+          { "code": "integer" }
+        ],
+        "extension": [
+          {
+            "url": "http://example.org/fhir/StructureDefinition/himsCode",
+            "valueString": "2.3"
+          }
+        ]
+      },
+      {
+        "id": "Questionnaire.item.complementaryFeedingStartMonth",
+        "path": "Questionnaire.item",
+        "short": "At what month was complementary feeding started?",
+        "min": 0,
+        "max": "1",
+        "type": [
+          { "code": "integer" }
+        ],
+        "extension": [
+          {
+            "url": "http://example.org/fhir/StructureDefinition/himsCode",
+            "valueString": "2.3"
+          }
+        ]
+      },
+      {
+        "id": "Questionnaire.item.antenatalVisitsMother",
+        "path": "Questionnaire.item",
+        "short": "How many antenatal visits did the mother attend?",
+        "min": 0,
+        "max": "1",
+        "type": [
+          { "code": "integer" }
+        ],
+        "extension": [
+          {
+            "url": "http://example.org/fhir/StructureDefinition/himsCode",
+            "valueString": "3.1"
+          }
+        ]
+      },
+      {
+        "id": "Questionnaire.item.mealsPerDayChild",
+        "path": "Questionnaire.item",
+        "short": "Number of meals the child eats per day?",
+        "min": 0,
+        "max": "1",
+        "type": [
+          { "code": "integer" }
+        ],
+        "extension": [
+          {
+            "url": "http://example.org/fhir/StructureDefinition/himsCode",
+            "valueString": "2.3"
+          }
+        ]
+      },
+      {
+        "id": "Questionnaire.item.childNutritionalStatus",
+        "path": "Questionnaire.item",
+        "short": "What is the child's nutritional status?",
+        "min": 0,
+        "max": "1",
+        "type": [
+          { "code": "string" }
+        ],
+        "extension": [
+          {
+            "url": "http://example.org/fhir/StructureDefinition/himsCode",
+            "valueString": "2.3"
+          }
+        ]
+      },
+      {
+        "id": "Questionnaire.item.primarySourceDrinkingWater",
+        "path": "Questionnaire.item",
+        "short": "What is the primary source of drinking water?",
+        "min": 0,
+        "max": "1",
+        "type": [
+          { "code": "string" }
+        ],
+        "extension": [
+          {
+            "url": "http://example.org/fhir/StructureDefinition/himsCode",
+            "valueString": "2.5"
+          }
+        ]
+      },
+      {
+        "id": "Questionnaire.item.feedingMethod",
+        "path": "Questionnaire.item",
+        "short": "Type of feeding method used?",
+        "min": 0,
+        "max": "1",
+        "type": [
+          { "code": "string" }
+        ],
+        "extension": [
+          {
+            "url": "http://example.org/fhir/StructureDefinition/himsCode",
+            "valueString": "2.3"
+          }
+        ]
+      },
+      {
+        "id": "Questionnaire.item.complementaryFoodFirstIntroduced",
+        "path": "Questionnaire.item",
+        "short": "Type of complementary food first introduced?",
+        "min": 0,
+        "max": "1",
+        "type": [
+          { "code": "string" }
+        ],
+        "extension": [
+          {
+            "url": "http://example.org/fhir/StructureDefinition/himsCode",
+            "valueString": "2.3"
+          }
+        ]
+      },
+      {
+        "id": "Questionnaire.item.serviceReceivedDuringOutreach",
+        "path": "Questionnaire.item",
+        "short": "Type of service received during outreach?",
+        "min": 0,
+        "max": "*",
+        "type": [
+          { "code": "string" }
+        ],
+        "extension": [
+          {
+            "url": "http://example.org/fhir/StructureDefinition/himsCode",
+            "valueString": "2.6"
+          }
+        ]
+      },
+      {
+        "id": "Questionnaire.item.reasonNoVitaminA",
+        "path": "Questionnaire.item",
+        "short": "Write down the reason for not providing Vitamin A.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          { "code": "string" }
+        ],
+        "extension": [
+          {
+            "url": "http://example.org/fhir/StructureDefinition/himsCode",
+            "valueString": "2.3"
+          }
+        ]
+      },
+      {
+        "id": "Questionnaire.item.typicalDailyDietChild",
+        "path": "Questionnaire.item",
+        "short": "Describe the child’s typical daily diet.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          { "code": "string" }
+        ],
+        "extension": [
+          {
+            "url": "http://example.org/fhir/StructureDefinition/himsCode",
+            "valueString": "2.3"
+          }
+        ]
+      },
+      {
+        "id": "Questionnaire.item.nutritionCounselingGiven",
+        "path": "Questionnaire.item",
+        "short": "Mention any nutrition-related counseling given.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          { "code": "string" }
+        ],
+        "extension": [
+          {
+            "url": "http://example.org/fhir/StructureDefinition/himsCode",
+            "valueString": "3.1"
+          }
+        ]
+      },
+      {
+        "id": "Questionnaire.item.signsMalnutritionObserved",
+        "path": "Questionnaire.item",
+        "short": "Describe observed signs of malnutrition.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          { "code": "string" }
+        ],
+        "extension": [
+          {
+            "url": "http://example.org/fhir/StructureDefinition/himsCode",
+            "valueString": "2.3"
+          }
+        ]
+      },
+      {
+        "id": "Questionnaire.item.motherUnderstandingComplementaryFeeding",
+        "path": "Questionnaire.item",
+        "short": "Write the mother's understanding of complementary feeding.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          { "code": "string" }
+        ],
+        "extension": [
+          {
+            "url": "http://example.org/fhir/StructureDefinition/himsCode",
+            "valueString": "3.1"
+          }
+        ]
+      },
+      {
+        "id": "Questionnaire.item.childGrowthChartUpToDate",
+        "path": "Questionnaire.item",
+        "short": "Is the child’s growth chart up-to-date?",
+        "min": 0,
+        "max": "1",
+        "type": [
+          { "code": "boolean" }
+        ],
+        "extension": [
+          {
+            "url": "http://example.org/fhir/StructureDefinition/himsCode",
+            "valueString": "2.3"
+          }
+        ]
+      },
+      {
+        "id": "Questionnaire.item.ironTabletDosesMother",
+        "path": "Questionnaire.item",
+        "short": "How many doses of iron tablets has the mother taken?",
+        "min": 0,
+        "max": "1",
+        "type": [
+          { "code": "integer" }
+        ],
+        "extension": [
+          {
+            "url": "http://example.org/fhir/StructureDefinition/himsCode",
+            "valueString": "3.1"
+          }
+        ]
+      },
+      {
+        "id": "Questionnaire.item.counselingDuringANCVisit",
+        "path": "Questionnaire.item",
+        "short": "What kind of counseling was provided during the ANC visit?",
+        "min": 0,
+        "max": "*",
+        "type": [
+          { "code": "string" }
+        ],
+        "extension": [
+          {
+            "url": "http://example.org/fhir/StructureDefinition/himsCode",
+            "valueString": "3.1"
+          }
+        ]
+      },
+      {
+        "id": "Questionnaire.item.childReceivedMNP",
+        "path": "Questionnaire.item",
+        "short": "Has the child received any micronutrient powders (MNP)?",
+        "min": 0,
+        "max": "1",
+        "type": [
+          { "code": "boolean" }
+        ],
+        "extension": [
+          {
+            "url": "http://example.org/fhir/StructureDefinition/himsCode",
+            "valueString": "2.3"
+          }
+        ]
+      },
+      {
+        "id": "Questionnaire.item.foodGivenDuringWeaning",
+        "path": "Questionnaire.item",
+        "short": "What type of food was given during weaning?",
+        "min": 0,
+        "max": "1",
+        "type": [
+          { "code": "string" }
+        ],
+        "extension": [
+          {
+            "url": "http://example.org/fhir/StructureDefinition/himsCode",
+            "valueString": "2.3"
+          }
+        ]
+      },
+      {
+        "id": "Questionnaire.item.motherAwareDietaryDiversity",
+        "path": "Questionnaire.item",
+        "short": "Is the mother aware of the minimum dietary diversity guidelines?",
+        "min": 0,
+        "max": "1",
+        "type": [
+          { "code": "boolean" }
+        ],
+        "extension": [
+          {
+            "url": "http://example.org/fhir/StructureDefinition/himsCode",
+            "valueString": "3.1"
+          }
+        ]
+      },
+      {
+        "id": "Questionnaire.item.familyMembersEducatedOnChildNutrition",
+        "path": "Questionnaire.item",
+        "short": "Number of family members educated on child nutrition?",
+        "min": 0,
+        "max": "1",
+        "type": [
+          { "code": "integer" }
+        ],
+        "extension": [
+          {
+            "url": "http://example.org/fhir/StructureDefinition/himsCode",
+            "valueString": "2.3"
+          }
+        ]
+      },
+      {
+        "id": "Questionnaire.item.foodItemsCommonlyConsumed",
+        "path": "Questionnaire.item",
+        "short": "What food items are commonly consumed in your household?",
+        "min": 0,
+        "max": "*",
+        "type": [
+          { "code": "string" }
+        ],
+        "extension": [
+          {
+            "url": "http://example.org/fhir/StructureDefinition/himsCode",
+            "valueString": "2.3"
+          }
+        ]
+      },
+      {
+        "id": "Questionnaire.item.barriersToGoodChildNutrition",
+        "path": "Questionnaire.item",
+        "short": "What do you perceive as barriers to good child nutrition?",
+        "min": 0,
+        "max": "*",
+        "type": [
+          { "code": "string" }
+        ],
+        "extension": [
+          {
+            "url": "http://example.org/fhir/StructureDefinition/himsCode",
+            "valueString": "2.3"
+          }
+        ]
+      }
+    ]
+  }
+}
