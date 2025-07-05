@@ -37,7 +37,7 @@ This repository contains three FHIR `StructureDefinition` profiles focused on ca
 
 What is Slicing?
 
-"Slicing" in FHIR allows you to split a repeating element (e.g., `component[]`, `extension[]`) into uniquely identifiable sub-parts ("slices") using a **discriminator** (such as a code or pattern).
+**Slicing** in FHIR allows you to split a repeating element (e.g., `component[]`, `extension[]`) into uniquely identifiable sub-parts ("slices") using a **discriminator** (such as a code or pattern).
 
  Why Was Slicing Used Here?
 
@@ -66,14 +66,16 @@ Each of these is uniquely identified by code.text and can be validated individua
 
 Without slicing, repeated components could not be explicitly differentiated.
 
- **FHIR Version**
+ **FHIR Version**:
+ 
 `All profiles are based on: FHIR R4 (4.0.1)`
 
-**Publisher**
+**Publisher**:
 
 `Example Publisher (Demographics, Questionnaire)`
 
- **Use Case Summary**
+ **Use Case Summary**:
+ 
 These FHIR profiles are intended to:
 
 `Streamline data collection for public health surveys`
@@ -83,7 +85,8 @@ These FHIR profiles are intended to:
 `Support automated analysis by standardizing data types and formats`
 
 
- **Contact**
+ **Contact**: 
+ 
 `For more information or integration help, please contact:`
 
 Ministry of Health - Nepal
