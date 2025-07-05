@@ -66,25 +66,25 @@ Each of these is uniquely identified by code.text and can be validated individua
 
 Without slicing, repeated components could not be explicitly differentiated.
 
- `FHIR Version`
-All profiles are based on: FHIR R4 (4.0.1)
+ **FHIR Version**
+`All profiles are based on: FHIR R4 (4.0.1)`
 
-` Publisher`
+**Publisher**
 
-Example Publisher (Demographics, Questionnaire)
+`Example Publisher (Demographics, Questionnaire)`
 
- `Use Case Summary`
+ **Use Case Summary**
 These FHIR profiles are intended to:
 
-Streamline data collection for public health surveys.
+`Streamline data collection for public health surveys`
 
-Ensure consistent interoperability across electronic health systems.
+`Ensure consistent interoperability across electronic health systems`
 
-Support automated analysis by standardizing data types and formats.
-Ministry of Health - Nepal (Vitals)
+`Support automated analysis by standardizing data types and formats`
 
- `Contact`
-For more information or integration help, please contact:
+
+ **Contact**
+`For more information or integration help, please contact:`
 
 Ministry of Health - Nepal
 FHIR Interoperability Team
