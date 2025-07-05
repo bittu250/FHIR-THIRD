@@ -13,7 +13,7 @@ This repository contains three FHIR `StructureDefinition` profiles focused on ca
 - **Special Feature:**
   - Uses an **extension slice** on `Patient.extension` to add ethnicity-specific information.
 
-
+---
 
   2. `nutrition-dietary-questionnaire.json`
 - **StructureDefinition ID:** `MotherChildNutritionSurvey`
@@ -23,7 +23,7 @@ This repository contains three FHIR `StructureDefinition` profiles focused on ca
 - **Extensions Used:**
   - `http://example.org/fhir/StructureDefinition/himsCode`: Associates questions with specific HIMS (Health Information Management System) codes for data reporting and integration.
 
-
+---
 
   3. `observation.json`
 - **StructureDefinition ID:** `MotherChildVitalsProfile`
@@ -33,7 +33,7 @@ This repository contains three FHIR `StructureDefinition` profiles focused on ca
 - **Special Feature:**
   - Implements **slicing** on `Observation.component` to allow structured entries for multiple types of vitals (e.g., weight, MUAC, BMI).
 
-
+---
 
 What is Slicing?
 
