@@ -52,15 +52,15 @@ In `observation.json`, slicing was applied to `Observation.component`:
 }
 This allows the creation of distinct components for:
 
-Mother - Body Weight
+**Mother - Body Weight**
 
-Mother - BMI
+**Mother - BMI**
 
-Child - Body Weight
+**Child - Body Weight**
 
-Child - MUAC
+**Child - MUAC**
 
-Child - Abdominal Circumference
+**Child - Abdominal Circumference**
 
 Each of these is uniquely identified by code.text and can be validated individually.
 
