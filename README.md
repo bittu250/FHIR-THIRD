@@ -66,11 +66,14 @@ Each of these is uniquely identified by code.text and can be validated individua
 
 Without slicing, repeated components could not be explicitly differentiated.
 
- FHIR Version
+ `FHIR Version`
 All profiles are based on: FHIR R4 (4.0.1)
- Publisher
+
+` Publisher`
+
 Example Publisher (Demographics, Questionnaire)
- Use Case Summary
+
+ `Use Case Summary`
 These FHIR profiles are intended to:
 
 Streamline data collection for public health surveys.
@@ -80,7 +83,7 @@ Ensure consistent interoperability across electronic health systems.
 Support automated analysis by standardizing data types and formats.
 Ministry of Health - Nepal (Vitals)
 
- Contact
+ `Contact`
 For more information or integration help, please contact:
 
 Ministry of Health - Nepal
