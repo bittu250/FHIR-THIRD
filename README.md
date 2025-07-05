@@ -50,3 +50,38 @@ In `observation.json`, slicing was applied to `Observation.component`:
     "rules": "open"
   }
 }
+This allows the creation of distinct components for:
+
+Mother - Body Weight
+
+Mother - BMI
+
+Child - Body Weight
+
+Child - MUAC
+
+Child - Abdominal Circumference
+
+Each of these is uniquely identified by code.text and can be validated individually.
+
+Without slicing, repeated components could not be explicitly differentiated.
+
+ FHIR Version
+All profiles are based on: FHIR R4 (4.0.1)
+ Publisher
+Example Publisher (Demographics, Questionnaire)
+ Use Case Summary
+These FHIR profiles are intended to:
+
+Streamline data collection for public health surveys.
+
+Ensure consistent interoperability across electronic health systems.
+
+Support automated analysis by standardizing data types and formats.
+Ministry of Health - Nepal (Vitals)
+
+ Contact
+For more information or integration help, please contact:
+
+Ministry of Health - Nepal
+FHIR Interoperability Team
