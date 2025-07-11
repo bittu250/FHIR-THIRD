@@ -1,142 +1,133 @@
 {
-  "resourceType": "Bundle",
-  "type": "collection",
-  "entry": [
+  "resourceType": "StructureDefinition",
+  "id": "PatientProfile",
+  "url": "http://example.org/fhir/StructureDefinition/PatientProfile",
+  "version": "1.0.0",
+  "name": "PatientProfile",
+  "status": "draft",
+  "date": "2025-05-28",
+  "publisher": "Example Publisher",
+  "description": "StructureDefinition for capturing patient profile data with constraints and questions.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Patient",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Patient",
+  "derivation": "constraint",
+  "contained": [
     {
-      "fullUrl": "http://example.org/fhir/StructureDefinition/PatientProfile",
-      "resource": {
-        "resourceType": "StructureDefinition",
-        "id": "PatientProfile",
-        "url": "http://example.org/fhir/StructureDefinition/PatientProfile",
-        "version": "1.0.0",
-        "name": "PatientProfile",
-        "status": "draft",
-        "date": "2025-05-28",
-        "publisher": "Example Publisher",
-        "description": "StructureDefinition for capturing patient profile data with constraints and questions.",
-        "fhirVersion": "4.0.1",
-        "kind": "resource",
-        "abstract": false,
-        "type": "Patient",
-        "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Patient",
-        "derivation": "constraint",
-        "differential": {
-          "element": [
-            {
-              "id": "Patient.name",
-              "path": "Patient.name",
-              "min": 1,
-              "max": "1",
-              "short": "What is your full name?",
-              "mustSupport": true
-            },
-            {
-              "id": "Patient.gender",
-              "path": "Patient.gender",
-              "min": 1,
-              "max": "1",
-              "short": "What is your gender?",
-              "mustSupport": true
-            },
-            {
-              "id": "Patient.birthDate",
-              "path": "Patient.birthDate",
-              "min": 1,
-              "max": "1",
-              "short": "What is your date of birth?",
-              "mustSupport": true
-            },
-            {
-              "id": "Patient.address",
-              "path": "Patient.address",
-              "min": 0,
-              "max": "1",
-              "short": "What is your current address?"
-            },
-            {
-              "id": "Patient.telecom",
-              "path": "Patient.telecom",
-              "min": 1,
-              "max": "*",
-              "short": "What is your contact number?",
-              "mustSupport": true
-            },
-            {
-              "id": "Patient.communication.language",
-              "path": "Patient.communication.language",
-              "min": 0,
-              "max": "1",
-              "short": "What is your preferred language?"
-            },
-            {
-              "id": "Patient.extension:ethnicity",
-              "path": "Patient.extension",
-              "sliceName": "ethnicity",
-              "min": 0,
-              "max": "1",
-              "type": [
-                {
-                  "code": "Extension",
-                  "profile": [
-                    "http://example.org/fhir/StructureDefinition/nepali-ethnicity"
-                  ]
-                }
-              ],
-              "short": "What is your ethnicity?"
-            }
-          ]
+      "resourceType": "StructureDefinition",
+      "id": "nepali-ethnicity",
+      "url": "http://example.org/fhir/StructureDefinition/nepali-ethnicity",
+      "version": "1.0.0",
+      "name": "NepaliEthnicity",
+      "title": "Nepali Ethnicity Extension",
+      "status": "draft",
+      "date": "2025-07-11",
+      "publisher": "Example Publisher",
+      "description": "Extension for capturing ethnicity of patients in Nepal.",
+      "fhirVersion": "4.0.1",
+      "kind": "complex-type",
+      "abstract": false,
+      "type": "Extension",
+      "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+      "derivation": "constraint",
+      "context": [
+        {
+          "type": "element",
+          "expression": "Patient"
         }
-      }
-    },
-    {
-      "fullUrl": "http://example.org/fhir/StructureDefinition/nepali-ethnicity",
-      "resource": {
-        "resourceType": "StructureDefinition",
-        "id": "nepali-ethnicity",
-        "url": "http://example.org/fhir/StructureDefinition/nepali-ethnicity",
-        "version": "1.0.0",
-        "name": "NepaliEthnicity",
-        "title": "Nepali Ethnicity Extension",
-        "status": "draft",
-        "date": "2025-07-11",
-        "publisher": "Example Publisher",
-        "description": "Extension for capturing ethnicity of patients in Nepal.",
-        "fhirVersion": "4.0.1",
-        "kind": "complex-type",
-        "abstract": false,
-        "type": "Extension",
-        "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
-        "derivation": "constraint",
-        "context": [
+      ],
+      "differential": {
+        "element": [
           {
-            "type": "element",
-            "expression": "Patient"
+            "id": "Extension",
+            "path": "Extension"
+          },
+          {
+            "id": "Extension.url",
+            "path": "Extension.url",
+            "fixedUri": "http://example.org/fhir/StructureDefinition/nepali-ethnicity"
+          },
+          {
+            "id": "Extension.valueCodeableConcept",
+            "path": "Extension.valueCodeableConcept",
+            "short": "Ethnicity value from a Nepali ethnicity code set",
+            "type": [
+              {
+                "code": "CodeableConcept"
+              }
+            ]
           }
-        ],
-        "differential": {
-          "element": [
-            {
-              "id": "Extension",
-              "path": "Extension"
-            },
-            {
-              "id": "Extension.url",
-              "path": "Extension.url",
-              "fixedUri": "http://example.org/fhir/StructureDefinition/nepali-ethnicity"
-            },
-            {
-              "id": "Extension.valueCodeableConcept",
-              "path": "Extension.valueCodeableConcept",
-              "short": "Ethnicity value from a Nepali ethnicity code set",
-              "type": [
-                {
-                  "code": "CodeableConcept"
-                }
-              ]
-            }
-          ]
-        }
+        ]
       }
     }
-  ]
+  ],
+  "differential": {
+    "element": [
+      {
+        "id": "Patient.name",
+        "path": "Patient.name",
+        "min": 1,
+        "max": "1",
+        "short": "What is your full name?",
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.gender",
+        "path": "Patient.gender",
+        "min": 1,
+        "max": "1",
+        "short": "What is your gender?",
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.birthDate",
+        "path": "Patient.birthDate",
+        "min": 1,
+        "max": "1",
+        "short": "What is your date of birth?",
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.address",
+        "path": "Patient.address",
+        "min": 0,
+        "max": "1",
+        "short": "What is your current address?"
+      },
+      {
+        "id": "Patient.telecom",
+        "path": "Patient.telecom",
+        "min": 1,
+        "max": "*",
+        "short": "What is your contact number?",
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.communication.language",
+        "path": "Patient.communication.language",
+        "min": 0,
+        "max": "1",
+        "short": "What is your preferred language?"
+      },
+      {
+        "id": "Patient.extension:ethnicity",
+        "path": "Patient.extension",
+        "sliceName": "ethnicity",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://example.org/fhir/StructureDefinition/nepali-ethnicity"
+            ]
+          }
+        ],
+        "short": "What is your ethnicity?"
+      }
+    ]
+  }
 }
+
